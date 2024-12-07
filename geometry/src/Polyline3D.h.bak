@@ -1,0 +1,32 @@
+#pragma once
+#include<vector>
+
+class Segment3D;
+class Point3D;
+
+class PolyLine3D 
+{
+private:
+	std::vector<Segment3D*> m_segments;
+
+public:
+
+	//Parameterized constructor
+	PolyLine3D(const std::vector<Point3D>& pointsFromLine);
+
+	//Function to get 100 points on nth segment of polyline
+	void GetPointsAlongSegment(std::vector<Point3D>& pointsOnSegments, int index);
+
+	//Function to get points on the segments of polyline
+	void GetPointsAlongSegments(std::vector<Point3D>& pointsOnSegments);
+
+	//Function to get precise point of intersection on polyline
+	Point3D GetPrecisePointOfProjection(const Point3D& pointToProject)const;
+
+	//Function to get precise point of intersection on polyline
+	Point3D GetApproximateOfProjection(const Point3D& pointToProject)const;
+
+	//Destructor
+	~PolyLine3D();
+};
+
