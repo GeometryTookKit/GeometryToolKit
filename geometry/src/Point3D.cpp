@@ -98,6 +98,20 @@ Point3D Point3D::GetPointAlongVector(const Vector3D& vector, double distance)
 
 //-----------------------------------------------------------------------------
 
+Point3D Point3D::operator*(const double scalar) const
+{
+	return Point3D(m_x * scalar, m_y * scalar, m_z * scalar);
+}
+
+//-----------------------------------------------------------------------------
+
+Point3D Point3D::operator+(const Point3D& otherPoint) const
+{
+	return Point3D(m_x + otherPoint.m_x, m_y + otherPoint.m_y, m_z + otherPoint.m_z);
+}
+
+//-----------------------------------------------------------------------------
+
 Point3D::~Point3D()
 {
 }

@@ -2,55 +2,14 @@
 #include "Point3D.h"
 #include "Matrix.h"
 
+//Standard includes
+#include <cassert>
+
 //-----------------------------------------------------------------------------
 
-BezierCurve::BezierCurve(const std::vector<Point3D>& pointsFromUser)
+BezierCurve::BezierCurve(const std::vector<Point3D>& cotrolPoints) :m_degree((int)cotrolPoints.size() - 1),
+m_controlPoints(cotrolPoints)
 {
-	m_degree = (int)pointsFromUser.size() - 1;
-	m_pointsGivenByUser = pointsFromUser;
-	m_controlPoints.resize(pointsFromUser.size());
-
-	double param = (double)1 / pointsFromUser.size();
-
-	std::vector<double> coefficientVector((m_degree + 1) * (m_degree + 1), 0);
-
-	std::vector<double> rightVectorForX(m_degree + 1, 0);
-	std::vector<double> rightVectorForY(m_degree + 1, 0);
-	std::vector<double> rightVectorForZ(m_degree + 1, 0);
-
-	for (int iRow = 0; iRow <= m_degree; ++iRow)
-	{
-		double paramValue = 0;
-		for (int iColumn = 0; iColumn <= m_degree; ++iColumn)
-		{
-			double basisFunction = (factorial(m_degree) / (factorial(m_degree - iColumn) * factorial(iColumn)))
-				* pow(paramValue, iColumn) * pow((1 - paramValue), m_degree - iColumn);
-			coefficientVector[(iRow * (m_degree + 1))+ iColumn] = basisFunction;
-			paramValue += param;
-		}
-		rightVectorForX[iRow] = m_pointsGivenByUser[iRow].GetX();
-		rightVectorForY[iRow] = m_pointsGivenByUser[iRow].GetY();
-		rightVectorForZ[iRow] = m_pointsGivenByUser[iRow].GetZ();
-	}
-
-	Matrix coefficientMatrix(m_degree + 1, m_degree + 1, coefficientVector);
-	Matrix inversCoefficientMatrix(coefficientMatrix.GetNumRows(), coefficientMatrix.GetNumColumns());
-	coefficientMatrix.Inverse(inversCoefficientMatrix);
-
-	Matrix righMatrixForX(m_degree + 1, 1, rightVectorForX);
-	Matrix righMatrixForY(m_degree + 1, 1, rightVectorForY);
-	Matrix righMatrixForZ(m_degree + 1, 1, rightVectorForZ);
-
-	Matrix xCoordinatesOfControlPoints = inversCoefficientMatrix.GetMatrixMultiplication(righMatrixForX);
-	Matrix yCoordinatesOfControlPoints = inversCoefficientMatrix.GetMatrixMultiplication(righMatrixForY);
-	Matrix zCoordinatesOfControlPoints = inversCoefficientMatrix.GetMatrixMultiplication(righMatrixForY);
-
-	for (int iSize =0; iSize < m_controlPoints.size(); ++iSize)
-	{
-		m_controlPoints[iSize].SetX(xCoordinatesOfControlPoints.GetMatrixElement(iSize,0));
-		m_controlPoints[iSize].SetY(yCoordinatesOfControlPoints.GetMatrixElement(iSize, 0));
-		m_controlPoints[iSize].SetZ(zCoordinatesOfControlPoints.GetMatrixElement(iSize, 0));
-	}
 }
 
 //-----------------------------------------------------------------------------
@@ -65,25 +24,23 @@ int BezierCurve::factorial(int number) const
 
 //-----------------------------------------------------------------------------
 
-void BezierCurve::GetPoinstAlongBazierCurve(std::vector<Point3D>& pointsAlongCurve) const
+Point3D BezierCurve::deCasteljauAlgorithm(const double param, const int i, const int j) const
 {
-	double param = (double)1 / 1000;        //To get 1000 points along the curve
+	if (i == 0)
+		return m_controlPoints[j-1];
+
+	return (deCasteljauAlgorithm(param, i - 1, j) * (1 - param)) +
+		   (deCasteljauAlgorithm(param, i - 1, j + 1) * param);
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::GetPoinstAlongBazierCurve(const int numPoints, std::vector<Point3D>& pointsAlongCurve) const
+{
+	double param = (double)1 / numPoints;        //To get 1000 points along the curve
 	for (double iParam = 0; iParam <= 1; iParam = iParam + param)
 	{
-		double xCoordinate = 0;
-		double yCoordinate = 0;
-		double zCoordinate = 0;
-
-		for (int iDegree = 0; iDegree <= m_degree; ++iDegree)
-		{
-			double basisFunction = (factorial(m_degree) / (factorial(m_degree - iDegree) * factorial(iDegree)))
-				* pow(iParam, iDegree) * pow((1 - iParam), m_degree - iDegree);
-
-			xCoordinate += basisFunction * m_pointsGivenByUser[iDegree].GetX();
-			yCoordinate += basisFunction * m_pointsGivenByUser[iDegree].GetY();
-			zCoordinate += basisFunction * m_pointsGivenByUser[iDegree].GetZ();
-		}
-		pointsAlongCurve.emplace_back(xCoordinate, yCoordinate, zCoordinate);
+		pointsAlongCurve.push_back(deCasteljauAlgorithm(iParam, m_degree, 1));
 	}
 }
 
@@ -92,7 +49,7 @@ void BezierCurve::GetPoinstAlongBazierCurve(std::vector<Point3D>& pointsAlongCur
 Point3D BezierCurve::GetApproxPointOfProjectionOnBezierCurve(const Point3D& pointToProject) const
 {
 	std::vector<Point3D> pointsAlongCurve;
-	GetPoinstAlongBazierCurve(pointsAlongCurve);
+	GetPoinstAlongBazierCurve(1000, pointsAlongCurve);
 
 	double distance = std::numeric_limits<double>::max();
 	Point3D projectionPoint;
@@ -112,6 +69,102 @@ Point3D BezierCurve::GetApproxPointOfProjectionOnBezierCurve(const Point3D& poin
 
 //-----------------------------------------------------------------------------
 
+void BezierCurve::AddControlPoint(const size_t index, const Point3D& controlPoint)
+{
+	assert(index <= m_controlPoints.size() && "Invalid Index!");
+
+	m_controlPoints.insert(m_controlPoints.begin() + index, controlPoint);
+	m_degree += 1;
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::RemoveControlPoint(const size_t index)
+{
+	assert(index < m_controlPoints.size() && "Invalid Index!");
+
+	m_controlPoints.erase(m_controlPoints.begin() + index);
+	m_degree -= 1;
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::UpdadeControlPoint(const size_t index, const Point3D& controlPoint)
+{
+	assert(index < m_controlPoints.size() && "Invalid Index!");
+
+	m_controlPoints[index] = controlPoint;
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::GetControlPoint(const size_t index, Point3D& controlPoint) const
+{
+	assert(index < m_controlPoints.size() && "Invalid Index!");
+
+	controlPoint = m_controlPoints[index];
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::GetControlPoints(std::vector<Point3D>& controlPoints) const
+{
+	controlPoints = m_controlPoints;
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::SetControlPoints(const std::vector<Point3D>& controlPoints)
+{
+	assert(controlPoints.size() >= 2 && "Invalid input for curve!");
+
+	m_controlPoints = controlPoints;
+	m_degree = (int)m_controlPoints.size() - 1;
+}
+
+//-----------------------------------------------------------------------------
+
+int BezierCurve::GetDegree() const
+{
+	return m_degree;
+}
+
+//-----------------------------------------------------------------------------
+
+size_t BezierCurve::GetNumControlPoints() const
+{
+	return m_controlPoints.size();
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::GetPointOnCurve(const double param, Point3D& pointOnCurve) const
+{
+	double xCoordinate = 0.0;
+	double yCoordinate = 0.0;
+	double zCoordinate = 0.0;
+
+	for (int iDegree = 0; iDegree <= m_degree; ++iDegree)
+	{
+		double basisFunction = (factorial(m_degree) / (factorial(m_degree - iDegree) * factorial(iDegree)))
+			* pow(param, iDegree) * pow((1 - param), m_degree - iDegree);
+
+		xCoordinate += basisFunction * m_controlPoints[iDegree].GetX();
+		yCoordinate += basisFunction * m_controlPoints[iDegree].GetY();
+		zCoordinate += basisFunction * m_controlPoints[iDegree].GetZ();
+	}
+	
+	pointOnCurve.SetXYZ(xCoordinate, yCoordinate, zCoordinate);
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::GetPointOnCurveUsingDeCasteljau(const double param, Point3D& point) const
+{
+	point =  deCasteljauAlgorithm(param, m_degree, 1);
+}
+
+//-----------------------------------------------------------------------------
 
 BezierCurve::~BezierCurve()
 {

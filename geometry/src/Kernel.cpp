@@ -117,7 +117,7 @@ int main()
 	case 7:   //Assignment 7: form a cubic Hermite Curve with the points and tangents given by user and dump points along the curve in Rhino 
 	{
 		BezierCurve bezierCurve(pointsFromFile);
-		bezierCurve.GetPoinstAlongBazierCurve(pointOnCurve);
+		bezierCurve.GetPoinstAlongBazierCurve(1000, pointOnCurve);
 		break;
 	}
 	case 8:    //Assignment 8: form a Bezier Curve with the control points given by user and dump points along the curve in Rhino 

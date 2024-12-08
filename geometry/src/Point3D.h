@@ -48,6 +48,12 @@ public:
 
 	//Function to get point along vector
 	Point3D GetPointAlongVector(const Vector3D& vector, double distance) override;
+
+	//Overload * operator for multiplication of point with scalar value
+	Point3D operator*(const double scalar)const override;
+
+	//Function to add two points
+	virtual Point3D operator+(const Point3D& otherPoint)const override;
 	
 	//Destructor
 	~Point3D();

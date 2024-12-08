@@ -36,6 +36,12 @@ public:
 	//This function calculate the distance between two points
 	double GetDistance(Point2D secondPoint)const override; 
 
+	//Overload * operator for multiplication of point with scalar value
+	virtual Point2D operator*(const double scalar)const;
+
+	//Function to add two points
+	virtual Point2D operator+(const Point2D& otherPoint)const override;
+
 	//Destructor
 	~Point2D() override;
 };

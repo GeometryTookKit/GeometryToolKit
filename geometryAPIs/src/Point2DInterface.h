@@ -28,6 +28,12 @@ public:
 	//This function calculate the distance between two points
 	virtual double GetDistance(Point2D secondPoint)const = 0;
 
+	//Overload * operator for multiplication of point with scalar value
+	virtual Point2D operator*(const double scalar)const = 0;
+	
+	//Function to add two points
+	virtual Point2D operator+(const Point2D& otherPoint)const = 0;
+
 	//Destructor
 	virtual ~Point2DInterface() = default;
 };

@@ -51,6 +51,7 @@
     <ClInclude Include="..\src\Vector3D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\geometryAPIs\src\Point3DInterface.cpp" />
     <ClCompile Include="..\src\BezierCurve.cpp" />
     <ClCompile Include="..\src\BSplineCurve.cpp" />
     <ClCompile Include="..\src\CubicHermiteCurve.cpp" />

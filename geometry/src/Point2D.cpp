@@ -73,6 +73,20 @@ double Point2D::GetDistance(Point2D secondPoint)const
 
 //-----------------------------------------------------------------------------
 
+Point2D Point2D::operator*(const double scalar) const
+{
+	return Point2D(m_x * scalar, m_y * scalar);
+}
+
+//-----------------------------------------------------------------------------
+
+Point2D Point2D::operator+(const Point2D& otherPoint) const
+{
+	return Point2D(m_x + otherPoint.m_x, m_y + otherPoint.m_y);
+}
+
+//-----------------------------------------------------------------------------
+
 Point2D::~Point2D( )
 {
 

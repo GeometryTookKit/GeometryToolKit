@@ -1,42 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GeometricToolkit\\GeoTools\\",
+  "WorkspaceRootPath": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Vector2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\BezierCurve.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\BezierCurve.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Vector2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\BezierCurve.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\BezierCurve.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Vector3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Point3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Segment3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Segment3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Point3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Segment2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Segment2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\Point3DInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometryAPIs\\src\\Point3DInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Polynomial.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Polynomial.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Point2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Polyline3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Polyline3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\Point2DInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometryAPIs\\src\\Point2DInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Point2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Point2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Point3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometry\\src\\Point3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\BezierCurveInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AFD818CA-B4A9-4152-9471-0C966F1D509D}|geometry\\wrk\\GeometryAssignments.vcxproj|solutionrelative:geometryAPIs\\src\\BezierCurveInterface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,116 +46,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Vector2D.cpp",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector2D.cpp",
-              "RelativeDocumentMoniker": "geometry\\src\\Vector2D.cpp",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector2D.cpp",
-              "RelativeToolTip": "geometry\\src\\Vector2D.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Point2D.cpp",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point2D.cpp",
+              "RelativeDocumentMoniker": "geometry\\src\\Point2D.cpp",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point2D.cpp",
+              "RelativeToolTip": "geometry\\src\\Point2D.cpp",
+              "ViewState": "AgIAADkAAAAAAAAAAAAlwEsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-25T17:27:00.474Z",
+              "WhenOpened": "2024-12-08T10:49:41.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Point2DInterface.h",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\Point2DInterface.h",
+              "RelativeDocumentMoniker": "geometryAPIs\\src\\Point2DInterface.h",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\Point2DInterface.h",
+              "RelativeToolTip": "geometryAPIs\\src\\Point2DInterface.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-08T10:48:38.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Vector3D.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector3D.h",
-              "RelativeDocumentMoniker": "geometry\\src\\Vector3D.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector3D.h",
-              "RelativeToolTip": "geometry\\src\\Vector3D.h",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:25:26.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Vector2D.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector2D.h",
-              "RelativeDocumentMoniker": "geometry\\src\\Vector2D.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Vector2D.h",
-              "RelativeToolTip": "geometry\\src\\Vector2D.h",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBkAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:24:23.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Segment3D.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Segment3D.h",
-              "RelativeDocumentMoniker": "geometry\\src\\Segment3D.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Segment3D.h",
-              "RelativeToolTip": "geometry\\src\\Segment3D.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADAAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:23:44.297Z"
+              "Title": "Point3D.cpp",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point3D.cpp",
+              "RelativeDocumentMoniker": "geometry\\src\\Point3D.cpp",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point3D.cpp",
+              "RelativeToolTip": "geometry\\src\\Point3D.cpp",
+              "ViewState": "AgIAAEwAAAAAAAAAAADgv10AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T10:47:45.667Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Segment2D.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Segment2D.h",
-              "RelativeDocumentMoniker": "geometry\\src\\Segment2D.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Segment2D.h",
-              "RelativeToolTip": "geometry\\src\\Segment2D.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Title": "Point3DInterface.h",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\Point3DInterface.h",
+              "RelativeDocumentMoniker": "geometryAPIs\\src\\Point3DInterface.h",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\Point3DInterface.h",
+              "RelativeToolTip": "geometryAPIs\\src\\Point3DInterface.h",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:23:17.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Polynomial.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Polynomial.h",
-              "RelativeDocumentMoniker": "geometry\\src\\Polynomial.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Polynomial.h",
-              "RelativeToolTip": "geometry\\src\\Polynomial.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:22:57.329Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Polyline3D.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Polyline3D.h",
-              "RelativeDocumentMoniker": "geometry\\src\\Polyline3D.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Polyline3D.h",
-              "RelativeToolTip": "geometry\\src\\Polyline3D.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:22:18.539Z"
+              "WhenOpened": "2024-12-08T10:44:36.29Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Point3D.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Point3D.h",
-              "RelativeDocumentMoniker": "geometry\\src\\Point3D.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Point3D.h",
-              "RelativeToolTip": "geometry\\src\\Point3D.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAArAAAAAAAAAA==",
+              "Title": "BezierCurveInterface.h",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\BezierCurveInterface.h",
+              "RelativeDocumentMoniker": "geometryAPIs\\src\\BezierCurveInterface.h",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometryAPIs\\src\\BezierCurveInterface.h",
+              "RelativeToolTip": "geometryAPIs\\src\\BezierCurveInterface.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:22:10.444Z"
+              "WhenOpened": "2024-12-08T09:35:58.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BezierCurve.cpp",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\BezierCurve.cpp",
+              "RelativeDocumentMoniker": "geometry\\src\\BezierCurve.cpp",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\BezierCurve.cpp*",
+              "RelativeToolTip": "geometry\\src\\BezierCurve.cpp*",
+              "ViewState": "AgIAAB8AAAAAAAAAAADgvy0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-08T09:29:54.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BezierCurve.h",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\BezierCurve.h",
+              "RelativeDocumentMoniker": "geometry\\src\\BezierCurve.h",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\BezierCurve.h*",
+              "RelativeToolTip": "geometry\\src\\BezierCurve.h*",
+              "ViewState": "AgIAAC0AAAAAAAAAAADgvz4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-08T09:28:40.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Point3D.h",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point3D.h",
+              "RelativeDocumentMoniker": "geometry\\src\\Point3D.h",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point3D.h",
+              "RelativeToolTip": "geometry\\src\\Point3D.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-25T17:22:10.444Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Point2D.h",
-              "DocumentMoniker": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Point2D.h",
+              "DocumentMoniker": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point2D.h",
               "RelativeDocumentMoniker": "geometry\\src\\Point2D.h",
-              "ToolTip": "D:\\GeometricToolkit\\GeoTools\\geometry\\src\\Point2D.h",
+              "ToolTip": "C:\\Users\\Digvijay\\source\\repos\\GeometryToolKit\\geometry\\src\\Point2D.h",
               "RelativeToolTip": "geometry\\src\\Point2D.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAlwB4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T17:21:48.298Z"
+              "WhenOpened": "2024-11-25T17:21:48.298Z",
+              "EditorCaption": ""
             }
           ]
         }
