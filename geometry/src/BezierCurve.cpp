@@ -166,6 +166,33 @@ void BezierCurve::GetPointOnCurveUsingDeCasteljau(const double param, Point3D& p
 
 //-----------------------------------------------------------------------------
 
+void BezierCurve::SplitCurve(const double param, std::vector<std::unique_ptr<BezierCurveInterface>>& splittedCurves) const
+{
+	Point3D commonControlPoint = deCasteljauAlgorithm(param, m_degree, 1);
+
+	std::vector<Point3D> leftCurveControlPoints{ commonControlPoint };
+	std::vector<Point3D> rightCurveControlPoints{ commonControlPoint };
+
+	int iLeft = m_degree-1;
+	int jLeft = 1;
+
+	int iRight = m_degree-1;
+	int jRight = 2;
+
+	for (int index = 0; index < m_degree; ++index)
+	{
+		leftCurveControlPoints.emplace_back(deCasteljauAlgorithm(param, iLeft--, jLeft));
+		rightCurveControlPoints.emplace_back(deCasteljauAlgorithm(param, iRight--, jRight++));
+	}
+
+	reverse(leftCurveControlPoints.begin(), leftCurveControlPoints.end());
+
+	splittedCurves.emplace_back(std::make_unique<BezierCurve>(leftCurveControlPoints));
+	splittedCurves.emplace_back(std::make_unique<BezierCurve>(rightCurveControlPoints));
+}
+
+//-----------------------------------------------------------------------------
+
 BezierCurve::~BezierCurve()
 {
 

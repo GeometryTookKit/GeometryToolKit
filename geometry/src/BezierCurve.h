@@ -3,6 +3,9 @@
 //Geom header
 #include "BezierCurveInterface.h"
 
+//Standard header
+#include <memory>
+
 //Forward declarations
 class Point3D;
 
@@ -33,34 +36,37 @@ public
     Point3D GetApproxPointOfProjectionOnBezierCurve(const Point3D& pointToProject)const override;
 
     //Function to insert a control point at given index
-    void AddControlPoint(const size_t index, const Point3D& controlPoint);
+    void AddControlPoint(const size_t index, const Point3D& controlPoint) override;
 
     //Function to remove control point
-    void RemoveControlPoint(const size_t index);
+    void RemoveControlPoint(const size_t index) override;
 
     //Function to update the control point at given index
-    void UpdadeControlPoint(const size_t index, const Point3D& controlPoint);
+    void UpdadeControlPoint(const size_t index, const Point3D& controlPoint) override;
 
     //Function to get control point at given index
-    void GetControlPoint(const size_t index, Point3D& controlPoint)const;
+    void GetControlPoint(const size_t index, Point3D& controlPoint)const override;
 
     //Function to get all control points of Bezier curve
-    void GetControlPoints(std::vector<Point3D>& controlPoints)const;
+    void GetControlPoints(std::vector<Point3D>& controlPoints)const override;
 
     //Function to set control points of the curve
-    void SetControlPoints(const std::vector<Point3D>& controlPoints);
+    void SetControlPoints(const std::vector<Point3D>& controlPoints) override;
 
     //Function to get degree of the curve
-    int GetDegree()const;
+    int GetDegree()const override;
 
     //Function to get number of control points
-    size_t GetNumControlPoints()const;
+    size_t GetNumControlPoints()const override;
 
     //Function to get point along curve for given parametric value
-    void GetPointOnCurve(const double param, Point3D& pointOnCurve)const;
+    void GetPointOnCurve(const double param, Point3D& pointOnCurve)const override;
 
     //Function to get point along curve using De Casteljau's algorithm
-    void GetPointOnCurveUsingDeCasteljau(const double param, Point3D& point)const;
+    void GetPointOnCurveUsingDeCasteljau(const double param, Point3D& point)const override;
+
+    //Function to split curve at given parametric value
+    void SplitCurve(const double param, std::vector<std::unique_ptr<BezierCurveInterface>>& splittedCurves)const override;
 
     //Default destructor
     ~BezierCurve() ;
