@@ -51,6 +51,12 @@ public:
     //Function to split curve at given parametric value
     virtual void SplitCurve(const double param, std::vector<std::unique_ptr<BezierCurveInterface>>& splittedCurves)const = 0;
 
+    //function to compute n th order derivative
+    virtual void GetNthOrderDerivative(const int order, std::vector<Point3D>& derivativeControlPoints)const = 0;
+
+    //Function to check C2 parametric continuity of the curve
+    virtual bool IsC2Continuous(const double param)const = 0;
+
     //Default destructor
     virtual ~BezierCurveInterface() = default;
 };

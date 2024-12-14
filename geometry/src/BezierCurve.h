@@ -21,6 +21,9 @@ private:
     //De Casteljau's Algorithm
     Point3D deCasteljauAlgorithm(const double param, const int i, const int j)const;
 
+    //function to compute derivative control points
+    void ComputeDerivativeControlPoints(const int order, std::vector<Point3D>& derivativeControlPoints)const;
+
 public
     :
     //Default constructor
@@ -67,6 +70,12 @@ public
 
     //Function to split curve at given parametric value
     void SplitCurve(const double param, std::vector<std::unique_ptr<BezierCurveInterface>>& splittedCurves)const override;
+
+    //function to compute n th order derivative
+    void GetNthOrderDerivative(const int order, std::vector<Point3D>& derivativeControlPoints)const override;
+
+    //Function to check C2 parametric continuity of the curve
+    virtual bool IsC2Continuous(const double param)const override;
 
     //Default destructor
     ~BezierCurve() ;

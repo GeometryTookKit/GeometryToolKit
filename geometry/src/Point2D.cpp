@@ -1,6 +1,9 @@
 #include "Point2D.h"
 #include "cmath"
 
+//-----------------------------------------------------------------------------
+
+const double ZeroConstant = 1e-6;
 
 //-----------------------------------------------------------------------------
 
@@ -83,6 +86,20 @@ Point2D Point2D::operator*(const double scalar) const
 Point2D Point2D::operator+(const Point2D& otherPoint) const
 {
 	return Point2D(m_x + otherPoint.m_x, m_y + otherPoint.m_y);
+}
+
+//-----------------------------------------------------------------------------
+
+Point2D Point2D::operator-(const Point2D& otherPoint) const
+{
+	return Point2D(m_x - otherPoint.m_x, m_y - otherPoint.m_y);
+}
+
+//-----------------------------------------------------------------------------
+
+bool Point2D::operator==(const Point2D& otherPoint) const
+{
+	return (fabs(m_x - otherPoint.m_x) <= ZeroConstant) && (fabs(m_y - otherPoint.m_y) <= ZeroConstant);
 }
 
 //-----------------------------------------------------------------------------

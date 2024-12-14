@@ -1,9 +1,14 @@
 #include "BezierCurve.h"
 #include "Point3D.h"
 #include "Matrix.h"
+#include "Vector3D.h"
 
 //Standard includes
 #include <cassert>
+
+//-----------------------------------------------------------------------------
+
+const double ZeroConstant = 1e-6;
 
 //-----------------------------------------------------------------------------
 
@@ -189,6 +194,94 @@ void BezierCurve::SplitCurve(const double param, std::vector<std::unique_ptr<Bez
 
 	splittedCurves.emplace_back(std::make_unique<BezierCurve>(leftCurveControlPoints));
 	splittedCurves.emplace_back(std::make_unique<BezierCurve>(rightCurveControlPoints));
+}
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::GetNthOrderDerivative(const int order, std::vector<Point3D>& derivativeControlPoints) const
+{
+	if (order > m_degree || order < 0)
+		return;
+
+	derivativeControlPoints = m_controlPoints;
+
+	ComputeDerivativeControlPoints(order, derivativeControlPoints);
+}
+
+//-----------------------------------------------------------------------------
+
+bool BezierCurve::IsC2Continuous(const double param) const
+{
+	std::vector<std::unique_ptr<BezierCurveInterface>> splitCurves;
+	SplitCurve(param, splitCurves);
+
+	if (splitCurves.empty() || splitCurves.size())
+	{
+		assert("Bezier curve didn't get split");
+		return false;
+	}
+
+	std::vector<Point3D> leftCurveCP;
+	splitCurves[0]->GetControlPoints(leftCurveCP);
+
+	std::vector<Point3D> rightCurveCP;
+	splitCurves[0]->GetControlPoints(rightCurveCP);
+
+	if (leftCurveCP.empty() || rightCurveCP.empty())
+		return false;
+
+	size_t leftCurveDegree = leftCurveCP.size() - 1;
+	size_t rightCurveDegree = rightCurveCP.size() - 1;
+
+	if (leftCurveDegree != m_degree || rightCurveDegree != m_degree)
+		return false;
+
+	//To check C0 continuity
+	if (!(leftCurveCP[leftCurveDegree] == rightCurveCP[0]))
+		return false;
+
+	//To check C1 continuity 
+	Vector3D leftCurveTangent(leftCurveCP[leftCurveDegree] - leftCurveCP[leftCurveDegree - 1]);
+	Vector3D rightCurveTangent(rightCurveCP[1] - rightCurveCP[0]);
+
+	if (!(fabs(leftCurveTangent.GetMagnitude() - rightCurveTangent.GetMagnitude()) <= ZeroConstant && leftCurveTangent.isParallel(rightCurveTangent)))
+		return false;
+
+	//To check C2 continuity 
+	std::vector<Point3D> leftCurveDerivativeCP;
+	std::vector<Point3D> rightCurveDerivativeCP;
+
+	splitCurves[0]->GetNthOrderDerivative(2, leftCurveDerivativeCP);
+	splitCurves[1]->GetNthOrderDerivative(2, rightCurveDerivativeCP);
+
+	if (leftCurveDerivativeCP.empty() || rightCurveDerivativeCP.empty())
+		return false;
+
+	if (!(leftCurveDerivativeCP[leftCurveDerivativeCP.size() - 1] == rightCurveDerivativeCP[0]))
+		return false;
+
+	return true;
+}
+
+
+//-----------------------------------------------------------------------------
+
+void BezierCurve::ComputeDerivativeControlPoints(const int order, std::vector<Point3D>& derivativeControlPoints) const
+{
+	if (order == 0)
+		return;
+
+	std::vector<Point3D> newControlPoints;
+	size_t degree = derivativeControlPoints.size() - 1;
+
+	for (size_t iCPoint = 0; iCPoint < degree; ++iCPoint)
+	{
+		Point3D derivativeControlPoint = (derivativeControlPoints[iCPoint + 1] - derivativeControlPoints[iCPoint]) * (double)degree;
+		newControlPoints.push_back(derivativeControlPoint);
+	}
+
+	ComputeDerivativeControlPoints(order - 1, newControlPoints);
+	derivativeControlPoints = newControlPoints;
 }
 
 //-----------------------------------------------------------------------------

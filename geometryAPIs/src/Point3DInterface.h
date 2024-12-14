@@ -38,11 +38,17 @@ public:
 	//Function to get point along vector
 	virtual Point3D GetPointAlongVector(const Vector3D& vector, double distance) = 0;
 
-	//Overload * operator for multiplication of point with scalar value
+	//Overloaded * operator to scale a Point3D by a scalar value
 	virtual Point3D operator*(const double scalar)const = 0;
 
-	//Function to add two points
+	//Overloaded + operator to add two points
 	virtual Point3D operator+(const Point3D& otherPoint)const = 0;
+
+	//Overloaded - operator to add two points
+	virtual Point3D operator-(const Point3D& otherPoint)const = 0;
+
+	//Overloaded == operator to check equality of two points
+	virtual bool operator==(const Point3D& otherPoint)const = 0;
 
 	//Destructor
 	virtual ~Point3DInterface() = default;

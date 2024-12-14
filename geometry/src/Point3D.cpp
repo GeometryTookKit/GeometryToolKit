@@ -4,6 +4,10 @@
 
 //-----------------------------------------------------------------------------
 
+const double ZeroConstant = 1e-6;
+
+//-----------------------------------------------------------------------------
+
 Point3D::Point3D()
 {
 	m_x = 0.0;
@@ -108,6 +112,22 @@ Point3D Point3D::operator*(const double scalar) const
 Point3D Point3D::operator+(const Point3D& otherPoint) const
 {
 	return Point3D(m_x + otherPoint.m_x, m_y + otherPoint.m_y, m_z + otherPoint.m_z);
+}
+
+//-----------------------------------------------------------------------------
+
+Point3D Point3D::operator-(const Point3D& otherPoint) const
+{
+	return Point3D(m_x - otherPoint.m_x, m_y - otherPoint.m_y, m_z - otherPoint.m_z);
+}
+
+//-----------------------------------------------------------------------------
+
+bool Point3D::operator==(const Point3D& otherPoint) const
+{
+	return (fabs(m_x - otherPoint.m_x) <= ZeroConstant) && 
+		   (fabs(m_y - otherPoint.m_y) <= ZeroConstant) && 
+		   (fabs(m_z - otherPoint.m_z) <= ZeroConstant);
 }
 
 //-----------------------------------------------------------------------------

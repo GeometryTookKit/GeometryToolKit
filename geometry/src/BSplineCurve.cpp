@@ -3,7 +3,7 @@
 
 //-----------------------------------------------------------------------------
 
-static double zeroConstant = 1e-6;
+const double ZeroConstant = 1e-6;
 
 //-----------------------------------------------------------------------------
 
@@ -54,13 +54,13 @@ double BSplineCurve::BSplineBasisFunction(int i, int degree, double param) const
 	double firstComponent = 0;
 	double firstComponent1 = (param - m_knotVector[i]);
 	double firstComponent2 = (m_knotVector[i + degree] - m_knotVector[i]);
-	if (!(fabs(firstComponent2 - zeroConstant) <= zeroConstant))
+	if (!(fabs(firstComponent2 - ZeroConstant) <= ZeroConstant))
 		firstComponent = firstComponent1 / firstComponent2;
 
 	double secondComponent = 0;
 	double secondComponent1 = (m_knotVector[i + degree + 1] - param); 
 	double secondComponent2 = (m_knotVector[i + degree + 1] - m_knotVector[i + 1]);
-	if (!(fabs(secondComponent2 - zeroConstant) <= zeroConstant))
+	if (!(fabs(secondComponent2 - ZeroConstant) <= ZeroConstant))
 		secondComponent = secondComponent1 / secondComponent2;
 
 	return (firstComponent * BSplineBasisFunction(i, degree - 1, param)) + (secondComponent * BSplineBasisFunction(i + 1, degree - 1, param));
